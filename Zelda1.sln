@@ -1,0 +1,139 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27004.2002
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Zelda1", "Source\Zelda1.vcxproj", "{6D0C0CC1-2E46-41F4-94C1-0F91F125C4A8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ThirdParty", "ThirdParty", "{8822E633-C61C-4309-A702-3478C315193A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SDL2.0.5", "SDL2.0.5", "{8B586C12-DC5D-4F11-8789-79C4A135091B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Bin", "Bin", "{34710EA9-3C49-43E5-97B2-337B4769D284}"
+	ProjectSection(SolutionItems) = preProject
+		ThirdParty\SDL2.0.5\Bin\Win32\SDL2.dll = ThirdParty\SDL2.0.5\Bin\Win32\SDL2.dll
+		ThirdParty\SDL2.0.5\Bin\Win32\SDL2.lib = ThirdParty\SDL2.0.5\Bin\Win32\SDL2.lib
+		ThirdParty\SDL2.0.5\Bin\Win32\SDL2D.dll = ThirdParty\SDL2.0.5\Bin\Win32\SDL2D.dll
+		ThirdParty\SDL2.0.5\Bin\Win32\SDL2D.lib = ThirdParty\SDL2.0.5\Bin\Win32\SDL2D.lib
+		ThirdParty\SDL2.0.5\Bin\Win32\SDL2main.lib = ThirdParty\SDL2.0.5\Bin\Win32\SDL2main.lib
+		ThirdParty\SDL2.0.5\Bin\Win32\SDL2mainD.lib = ThirdParty\SDL2.0.5\Bin\Win32\SDL2mainD.lib
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Include", "Include", "{FA50CE43-62A0-4BA9-B030-04A60FCD9C8F}"
+	ProjectSection(SolutionItems) = preProject
+		ThirdParty\SDL2.0.5\include\begin_code.h = ThirdParty\SDL2.0.5\include\begin_code.h
+		ThirdParty\SDL2.0.5\include\close_code.h = ThirdParty\SDL2.0.5\include\close_code.h
+		ThirdParty\SDL2.0.5\include\SDL.h = ThirdParty\SDL2.0.5\include\SDL.h
+		ThirdParty\SDL2.0.5\include\SDL_assert.h = ThirdParty\SDL2.0.5\include\SDL_assert.h
+		ThirdParty\SDL2.0.5\include\SDL_atomic.h = ThirdParty\SDL2.0.5\include\SDL_atomic.h
+		ThirdParty\SDL2.0.5\include\SDL_audio.h = ThirdParty\SDL2.0.5\include\SDL_audio.h
+		ThirdParty\SDL2.0.5\include\SDL_bits.h = ThirdParty\SDL2.0.5\include\SDL_bits.h
+		ThirdParty\SDL2.0.5\include\SDL_blendmode.h = ThirdParty\SDL2.0.5\include\SDL_blendmode.h
+		ThirdParty\SDL2.0.5\include\SDL_clipboard.h = ThirdParty\SDL2.0.5\include\SDL_clipboard.h
+		ThirdParty\SDL2.0.5\include\SDL_config.h = ThirdParty\SDL2.0.5\include\SDL_config.h
+		ThirdParty\SDL2.0.5\include\SDL_config_windows.h = ThirdParty\SDL2.0.5\include\SDL_config_windows.h
+		ThirdParty\SDL2.0.5\include\SDL_cpuinfo.h = ThirdParty\SDL2.0.5\include\SDL_cpuinfo.h
+		ThirdParty\SDL2.0.5\include\SDL_endian.h = ThirdParty\SDL2.0.5\include\SDL_endian.h
+		ThirdParty\SDL2.0.5\include\SDL_error.h = ThirdParty\SDL2.0.5\include\SDL_error.h
+		ThirdParty\SDL2.0.5\include\SDL_events.h = ThirdParty\SDL2.0.5\include\SDL_events.h
+		ThirdParty\SDL2.0.5\include\SDL_filesystem.h = ThirdParty\SDL2.0.5\include\SDL_filesystem.h
+		ThirdParty\SDL2.0.5\include\SDL_gamecontroller.h = ThirdParty\SDL2.0.5\include\SDL_gamecontroller.h
+		ThirdParty\SDL2.0.5\include\SDL_gesture.h = ThirdParty\SDL2.0.5\include\SDL_gesture.h
+		ThirdParty\SDL2.0.5\include\SDL_haptic.h = ThirdParty\SDL2.0.5\include\SDL_haptic.h
+		ThirdParty\SDL2.0.5\include\SDL_hints.h = ThirdParty\SDL2.0.5\include\SDL_hints.h
+		ThirdParty\SDL2.0.5\include\SDL_joystick.h = ThirdParty\SDL2.0.5\include\SDL_joystick.h
+		ThirdParty\SDL2.0.5\include\SDL_keyboard.h = ThirdParty\SDL2.0.5\include\SDL_keyboard.h
+		ThirdParty\SDL2.0.5\include\SDL_keycode.h = ThirdParty\SDL2.0.5\include\SDL_keycode.h
+		ThirdParty\SDL2.0.5\include\SDL_loadso.h = ThirdParty\SDL2.0.5\include\SDL_loadso.h
+		ThirdParty\SDL2.0.5\include\SDL_log.h = ThirdParty\SDL2.0.5\include\SDL_log.h
+		ThirdParty\SDL2.0.5\include\SDL_main.h = ThirdParty\SDL2.0.5\include\SDL_main.h
+		ThirdParty\SDL2.0.5\include\SDL_messagebox.h = ThirdParty\SDL2.0.5\include\SDL_messagebox.h
+		ThirdParty\SDL2.0.5\include\SDL_mouse.h = ThirdParty\SDL2.0.5\include\SDL_mouse.h
+		ThirdParty\SDL2.0.5\include\SDL_mutex.h = ThirdParty\SDL2.0.5\include\SDL_mutex.h
+		ThirdParty\SDL2.0.5\include\SDL_pixels.h = ThirdParty\SDL2.0.5\include\SDL_pixels.h
+		ThirdParty\SDL2.0.5\include\SDL_platform.h = ThirdParty\SDL2.0.5\include\SDL_platform.h
+		ThirdParty\SDL2.0.5\include\SDL_power.h = ThirdParty\SDL2.0.5\include\SDL_power.h
+		ThirdParty\SDL2.0.5\include\SDL_quit.h = ThirdParty\SDL2.0.5\include\SDL_quit.h
+		ThirdParty\SDL2.0.5\include\SDL_rect.h = ThirdParty\SDL2.0.5\include\SDL_rect.h
+		ThirdParty\SDL2.0.5\include\SDL_render.h = ThirdParty\SDL2.0.5\include\SDL_render.h
+		ThirdParty\SDL2.0.5\include\SDL_rwops.h = ThirdParty\SDL2.0.5\include\SDL_rwops.h
+		ThirdParty\SDL2.0.5\include\SDL_scancode.h = ThirdParty\SDL2.0.5\include\SDL_scancode.h
+		ThirdParty\SDL2.0.5\include\SDL_stdinc.h = ThirdParty\SDL2.0.5\include\SDL_stdinc.h
+		ThirdParty\SDL2.0.5\include\SDL_surface.h = ThirdParty\SDL2.0.5\include\SDL_surface.h
+		ThirdParty\SDL2.0.5\include\SDL_system.h = ThirdParty\SDL2.0.5\include\SDL_system.h
+		ThirdParty\SDL2.0.5\include\SDL_thread.h = ThirdParty\SDL2.0.5\include\SDL_thread.h
+		ThirdParty\SDL2.0.5\include\SDL_timer.h = ThirdParty\SDL2.0.5\include\SDL_timer.h
+		ThirdParty\SDL2.0.5\include\SDL_touch.h = ThirdParty\SDL2.0.5\include\SDL_touch.h
+		ThirdParty\SDL2.0.5\include\SDL_version.h = ThirdParty\SDL2.0.5\include\SDL_version.h
+		ThirdParty\SDL2.0.5\include\SDL_video.h = ThirdParty\SDL2.0.5\include\SDL_video.h
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SDL_Image2.0.1", "SDL_Image2.0.1", "{E02711AE-6DCF-4C2B-987B-6AFE6944BE3F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Include", "Include", "{210D6C5A-3A51-4C19-B5C9-9883247CAE93}"
+	ProjectSection(SolutionItems) = preProject
+		ThirdParty\SDL_Image2.0.1\include\SDL_image.h = ThirdParty\SDL_Image2.0.1\include\SDL_image.h
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Bin", "Bin", "{886FE5AC-B304-4C6D-900C-89AB01B984D7}"
+	ProjectSection(SolutionItems) = preProject
+		ThirdParty\SDL_Image2.0.1\Bin\Win32\SDL2_image.dll = ThirdParty\SDL_Image2.0.1\Bin\Win32\SDL2_image.dll
+		ThirdParty\SDL_Image2.0.1\Bin\Win32\SDL2_image.lib = ThirdParty\SDL_Image2.0.1\Bin\Win32\SDL2_image.lib
+		ThirdParty\SDL_Image2.0.1\Bin\Win32\SDL2_imageD.dll = ThirdParty\SDL_Image2.0.1\Bin\Win32\SDL2_imageD.dll
+		ThirdParty\SDL_Image2.0.1\Bin\Win32\SDL2_imageD.lib = ThirdParty\SDL_Image2.0.1\Bin\Win32\SDL2_imageD.lib
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "External", "External", "{F4C0EB04-CAF1-4174-ACDE-3D9E472A0E89}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Bin", "Bin", "{B78BAF3E-DE35-4AA6-A3C6-931B588DC103}"
+	ProjectSection(SolutionItems) = preProject
+		ThirdParty\External\Bin\Win32\libjpeg-9.dll = ThirdParty\External\Bin\Win32\libjpeg-9.dll
+		ThirdParty\External\Bin\Win32\libpng16-16.dll = ThirdParty\External\Bin\Win32\libpng16-16.dll
+		ThirdParty\External\Bin\Win32\libtiff-5.dll = ThirdParty\External\Bin\Win32\libtiff-5.dll
+		ThirdParty\External\Bin\Win32\libwebp-4.dll = ThirdParty\External\Bin\Win32\libwebp-4.dll
+		ThirdParty\External\Bin\Win32\zlib1.dll = ThirdParty\External\Bin\Win32\zlib1.dll
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{54BDCC98-943D-42E8-96EE-DF91353B32FC}"
+	ProjectSection(SolutionItems) = preProject
+		Doxyfile.dxg = Doxyfile.dxg
+		ReadMe.md = ReadMe.md
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6D0C0CC1-2E46-41F4-94C1-0F91F125C4A8}.Debug|x86.ActiveCfg = Debug|Win32
+		{6D0C0CC1-2E46-41F4-94C1-0F91F125C4A8}.Debug|x86.Build.0 = Debug|Win32
+		{6D0C0CC1-2E46-41F4-94C1-0F91F125C4A8}.Release|x86.ActiveCfg = Release|Win32
+		{6D0C0CC1-2E46-41F4-94C1-0F91F125C4A8}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{8B586C12-DC5D-4F11-8789-79C4A135091B} = {8822E633-C61C-4309-A702-3478C315193A}
+		{34710EA9-3C49-43E5-97B2-337B4769D284} = {8B586C12-DC5D-4F11-8789-79C4A135091B}
+		{FA50CE43-62A0-4BA9-B030-04A60FCD9C8F} = {8B586C12-DC5D-4F11-8789-79C4A135091B}
+		{E02711AE-6DCF-4C2B-987B-6AFE6944BE3F} = {8822E633-C61C-4309-A702-3478C315193A}
+		{210D6C5A-3A51-4C19-B5C9-9883247CAE93} = {E02711AE-6DCF-4C2B-987B-6AFE6944BE3F}
+		{886FE5AC-B304-4C6D-900C-89AB01B984D7} = {E02711AE-6DCF-4C2B-987B-6AFE6944BE3F}
+		{F4C0EB04-CAF1-4174-ACDE-3D9E472A0E89} = {8822E633-C61C-4309-A702-3478C315193A}
+		{B78BAF3E-DE35-4AA6-A3C6-931B588DC103} = {F4C0EB04-CAF1-4174-ACDE-3D9E472A0E89}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5248B289-E7F5-47E2-A5AB-4BEB23707EF0}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 2
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://ualr-projects.visualstudio.com/
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = Source\\Zelda1.vcxproj
+		SccProjectName1 = Source
+		SccLocalPath1 = Source
+	EndGlobalSection
+EndGlobal

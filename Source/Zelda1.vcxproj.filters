@@ -1,0 +1,221 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Assets">
+      <UniqueIdentifier>{96e68c75-f33b-4694-9ebe-3dc7bab04236}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assets\Config">
+      <UniqueIdentifier>{7faa13a5-e47e-47dd-b34d-9e2d8d17392d}</UniqueIdentifier>
+      <Extensions>xml;</Extensions>
+    </Filter>
+    <Filter Include="Documentation">
+      <UniqueIdentifier>{3c88bc10-bff7-4482-9225-ac9136a2bbd5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assets\Images">
+      <UniqueIdentifier>{124d7336-0069-4943-8fdd-be9847b9604e}</UniqueIdentifier>
+      <Extensions>png;</Extensions>
+    </Filter>
+    <Filter Include="Header Files\Utility">
+      <UniqueIdentifier>{6f2d6663-e8b8-40ed-a9a3-f4a8908345a5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\XML">
+      <UniqueIdentifier>{d56ea52d-8c0f-46d9-beb5-b88171569af8}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include=".\Timer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Game.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="View.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Texture.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Utility\DebugUtils.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Renderer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Window.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Actor.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="BlueLeever.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="BlueOctorok.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="RedLeever.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="RedOctorok.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ArtAssetLibrary.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GameAssetLibrary.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GraphicsDevice.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="InputDevice.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FileStream.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="XmlGameDataHandler.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="XmlParser.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include=".\Timer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Game.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Common.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="View.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Texture.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="IRenderable.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Renderer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Utility\DebugUtils.h">
+      <Filter>Header Files\Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="Utility\Vector2.h">
+      <Filter>Header Files\Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="Utility\MathUtils.h">
+      <Filter>Header Files\Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="XmlGameData.h">
+      <Filter>Header Files\XML</Filter>
+    </ClInclude>
+    <ClInclude Include="XmlGameDataHandler.h">
+      <Filter>Header Files\XML</Filter>
+    </ClInclude>
+    <ClInclude Include="XmlParser.h">
+      <Filter>Header Files\XML</Filter>
+    </ClInclude>
+    <ClInclude Include="FileStream.h">
+      <Filter>Header Files\XML</Filter>
+    </ClInclude>
+    <ClInclude Include="Window.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SDLHandle.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Actor.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="BlueLeever.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="BlueOctorok.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="RedLeever.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="RedOctorok.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ArtAssetLibrary.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AssetLibrary.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GameAssetLibrary.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GraphicsDevice.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="InputDevice.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ObjectFactory.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\Assets\Images\leever_b.png">
+      <Filter>Assets\Images</Filter>
+    </Image>
+    <Image Include="..\Assets\Images\leever_r.png">
+      <Filter>Assets\Images</Filter>
+    </Image>
+    <Image Include="..\Assets\Images\octorok_b.png">
+      <Filter>Assets\Images</Filter>
+    </Image>
+    <Image Include="..\Assets\Images\octorok_r.png">
+      <Filter>Assets\Images</Filter>
+    </Image>
+    <Image Include="..\Assets\Images\arrow_b.png">
+      <Filter>Assets\Images</Filter>
+    </Image>
+    <Image Include="..\Assets\Images\arrow_r.png">
+      <Filter>Assets\Images</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <Xml Include="..\Assets\Config\level1.xml">
+      <Filter>Assets\Config</Filter>
+    </Xml>
+    <Xml Include="..\Assets\Config\level2.xml">
+      <Filter>Assets\Config</Filter>
+    </Xml>
+    <Xml Include="..\Assets\Config\objects.xml">
+      <Filter>Assets\Config</Filter>
+    </Xml>
+    <Xml Include="..\Assets\Config\objects_arrows.xml">
+      <Filter>Assets\Config</Filter>
+    </Xml>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\Documentation\Zelda1 Specification.pdf">
+      <Filter>Documentation</Filter>
+    </None>
+  </ItemGroup>
+</Project>

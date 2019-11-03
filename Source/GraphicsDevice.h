@@ -55,7 +55,7 @@ public:
      *  @retval true on success
      *  @retval false on error
      */
-    bool ShutDown  (void);
+    bool ShutDown  (void) noexcept;
 
     /**
      *  @brief Clear the underlying SDL rendering target with the current drawing color

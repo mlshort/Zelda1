@@ -36,6 +36,9 @@ CFileStream::~CFileStream(void)
 
 HRESULT CFileStream::OpenFile(const TCHAR* pName, IStream** ppIStream, bool fWrite)
 {
+    if (ppIStream == nullptr)
+        return E_POINTER;
+
     HANDLE hFile = ::CreateFile(pName, fWrite ? GENERIC_WRITE : GENERIC_READ, FILE_SHARE_READ,
                                  nullptr, fWrite ? CREATE_ALWAYS : OPEN_EXISTING, FILE_ATTRIBUTE_NORMAL, nullptr);
 
@@ -73,7 +76,7 @@ ULONG STDMETHODCALLTYPE CFileStream::AddRef(void)
     return static_cast<ULONG>(::InterlockedIncrement(&m_refCount));
 }
 
-ULONG STDMETHODCALLTYPE CFileStream::Release(void)
+ULONG STDMETHODCALLTYPE CFileStream::Release(void) noexcept
 {
     ULONG res = static_cast<ULONG>(::InterlockedDecrement(&m_refCount));
     if (res == 0)

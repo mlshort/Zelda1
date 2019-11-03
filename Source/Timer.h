@@ -45,16 +45,16 @@ public:
           m_bStarted( false )
     { };
     /// Default Destructor
-    ~CTimer(void) noexcept;
+    ~CTimer(void);
 
 
-    bool Initialize(void);
+    bool Initialize(void) noexcept;
 
     // Core Timer methods
-    void Start (void);
+    void Start (void) noexcept;
     void Stop  (void) noexcept;
-    void Pause (void);
-    void Resume(void);
+    void Pause (void) noexcept;
+    void Resume(void) noexcept;
 
     /**
      * @brief Returns milliseconds since timer entered current state
@@ -62,15 +62,15 @@ public:
      * @retval uint32_t   milliseconds since timer entered Start or Paused state
      * @retval 0          if timer is not running
      */
-    uint32_t GetTicks(void) const;
+    uint32_t GetTicks(void) const noexcept;
     /**
         @brief Returns milliseconds since this object was initialized
     */
-    uint32_t GetTimeSinceInit(void) const;
+    uint32_t GetTimeSinceInit(void) const noexcept;
     /**
         @brief Returns milliseconds since it was last called
     */
-    uint32_t GetTimeSinceLastFrame(void);
+    uint32_t GetTimeSinceLastFrame(void) noexcept;
 
     //Checks the status of the timer
     constexpr inline bool IsStarted(void) const noexcept

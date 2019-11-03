@@ -44,17 +44,17 @@ struct ATTRIBUTE
           m_strValue()
     { };
 
-    constexpr explicit ATTRIBUTE( const wchar_t* szName ) noexcept
+    constexpr explicit ATTRIBUTE( const wchar_t* szName )
         : m_strName( szName ),
           m_strValue()
     { };
 
-    constexpr explicit ATTRIBUTE( const wchar_t* szName, const wchar_t* szValue ) noexcept
+    constexpr explicit ATTRIBUTE( const wchar_t* szName, const wchar_t* szValue )
         : m_strName( szName ),
           m_strValue( szValue)
     { };
 
-    ATTRIBUTE( const ATTRIBUTE& othr ) noexcept
+    ATTRIBUTE( const ATTRIBUTE& othr )
         : m_strName( othr.m_strName ),
           m_strValue( othr.m_strValue )
     { };
@@ -109,7 +109,7 @@ public:
    { m_pHandler = nullptr; };
 
    bool Create      (void);
-   void Destroy     (void);
+   void Destroy     (void) noexcept;
    void SetHandler  (IXmlElementHandler* pHandler);
 
 

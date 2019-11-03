@@ -56,7 +56,7 @@ class CArtAssetLibrary
 
 public:
     /// Default Constructor
-    constexpr CArtAssetLibrary(void)
+    constexpr CArtAssetLibrary(void) noexcept
         : TAssetLibrary(),
           m_pGraphicsDev(nullptr)
     { };

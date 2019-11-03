@@ -90,7 +90,7 @@ public:
      *  @note If the window associated with the renderer is resized, the viewport
      *        is automatically reset.
      */
-    bool SetViewPort(const SDL_Rect& rect);
+    bool SetViewPort(const SDL_Rect& rect) noexcept;
 
     /**
      *  @brief Copy a portion of the texture to the current rendering target.
@@ -127,7 +127,7 @@ public:
                      DEGREES fAngle, const SDL_Point* pCenter, int iFlip);
 
     /// Deallocates managed SDL resource
-    void Destroy    (void);
+    void Destroy    (void) noexcept;
 
     /**
      *  @brief Get the output size in pixels of the rendering context
@@ -138,7 +138,7 @@ public:
      *  @retval true         on success
      *  @retval false        on error
      */
-    bool GetOutputSize(int& iWidth, int& iHeight);
+    bool GetOutputSize(int& iWidth, int& iHeight) noexcept;
 
    /**
     *  @brief Get information about this rendering context.
@@ -148,7 +148,7 @@ public:
     *  @retval true         on success
     *  @retval false        on error
     */
-    bool GetInfo(SDL_RendererInfo& info);
+    bool GetInfo(SDL_RendererInfo& info) noexcept;
 
     /**
      *  @brief Set the color used for drawing operations (Rect, Line and Clear).
@@ -162,7 +162,7 @@ public:
      *  @retval true        on success
      *  @retval false       on error
      */
-    bool SetDrawColor(uint8_t nRed, uint8_t nGreen, uint8_t nBlue, uint8_t nAlpha);
+    bool SetDrawColor(uint8_t nRed, uint8_t nGreen, uint8_t nBlue, uint8_t nAlpha) noexcept;
 
     /**
      *  @brief Create a texture from an existing surface.

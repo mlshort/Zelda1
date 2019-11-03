@@ -35,7 +35,7 @@ CWindow::~CWindow()
     Destroy();
 }
 
-void CWindow::Destroy(void)
+void CWindow::Destroy(void) noexcept
 {
     if (get_Handle())
     {
@@ -74,17 +74,17 @@ CRenderer*  CWindow::CreateRendererEx(int iIndex, unsigned int nFlags)
         return nullptr;
 };
 
-SDL_Renderer*  CWindow::GetRenderer(void)
+SDL_Renderer*  CWindow::GetRenderer(void) noexcept
 {
     return get_Handle() ? SDL_GetRenderer(get_Handle()) : nullptr;
 };
 
-SDL_Surface*   CWindow::GetSurface(void)
+SDL_Surface*   CWindow::GetSurface(void) noexcept
 {
     return get_Handle() ? SDL_GetWindowSurface(get_Handle()) : nullptr;
 };
 
-bool CWindow::SetPosition(int iX, int iY)
+bool CWindow::SetPosition(int iX, int iY) noexcept
 {
     if (get_Handle())
     {

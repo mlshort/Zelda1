@@ -104,9 +104,9 @@ void CView::OnSizeEvent(num_t iWidth, num_t iHeight) noexcept
 
 //**************************************
 //print view data
-void CView::Print(void)
+void CView::Print(void) noexcept
 {
     util::DebugTrace(_T("*****VIEW****** \n"));
-    util::DebugTrace(_T("ViewPosn X:[%d] Y:[%d] \n"), get_PosnX(), get_PosnY() );
-    util::DebugTrace(_T("ViewCtr  X:[%d] Y:[%d] \n"), get_CenterX(),   get_CenterY() );
+    util::DebugTrace(_T("ViewPosn X:[%d] Y:[%d] \n"), get_PosnX(),   get_PosnY() );
+    util::DebugTrace(_T("ViewCtr  X:[%d] Y:[%d] \n"), get_CenterX(), get_CenterY() );
 }

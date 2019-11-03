@@ -39,7 +39,7 @@ CTexture::~CTexture()
         Destroy();
 }
 
-void CTexture::Destroy(void)
+void CTexture::Destroy(void) noexcept
 {
     if (m_hSDL)
     {
@@ -88,7 +88,7 @@ void CTexture::Destroy(void)
     };
 
 
-bool CTexture::SetColor(uint8_t nRed, uint8_t nGreen, uint8_t nBlue)
+bool CTexture::SetColor(uint8_t nRed, uint8_t nGreen, uint8_t nBlue) noexcept
 {
     return (SDL_SetTextureColorMod(get_Handle(), nRed, nGreen, nBlue) == 0);
 }
@@ -231,28 +231,28 @@ bool CTexture::Query(uint32_t& nFormat, int& iAccess, int& iWidth, int& iHeight)
     return (SDL_QueryTexture(get_Handle(), &nFormat, &iAccess, &iWidth, &iHeight) == 0);
 };
 
-bool CTexture::SetColorMod(uint8_t nRed, uint8_t nGreen, uint8_t nBlue)
+bool CTexture::SetColorMod(uint8_t nRed, uint8_t nGreen, uint8_t nBlue) noexcept
 {
     return (SDL_SetTextureColorMod(get_Handle(), nRed, nGreen, nBlue) == 0);
 };
 
 
-bool CTexture::GetColorMod(uint8_t& nRed, uint8_t& nGreen, uint8_t& nBlue)
+bool CTexture::GetColorMod(uint8_t& nRed, uint8_t& nGreen, uint8_t& nBlue) noexcept
 {
     return (SDL_GetTextureColorMod(get_Handle(), &nRed, &nGreen, &nBlue) == 0);
 }
 
-bool CTexture::SetAlphaMod(uint8_t alpha)
+bool CTexture::SetAlphaMod(uint8_t alpha) noexcept
 {
     return (SDL_SetTextureAlphaMod(get_Handle(), alpha) == 0);
 };
 
-bool CTexture::GetAlphaMod(uint8_t& alpha)
+bool CTexture::GetAlphaMod(uint8_t& alpha) noexcept
 {
     return (SDL_GetTextureAlphaMod(get_Handle(), &alpha) == 0);
 }
 
-bool CTexture::Update(const SDL_Rect* pSDLRect, const void* pPixels, int iPitch)
+bool CTexture::Update(const SDL_Rect* pSDLRect, const void* pPixels, int iPitch) noexcept
 {
     return (SDL_UpdateTexture(get_Handle(), pSDLRect, pPixels, iPitch) == 0);
 };
@@ -260,7 +260,7 @@ bool CTexture::Update(const SDL_Rect* pSDLRect, const void* pPixels, int iPitch)
 bool CTexture::UpdateYUV(const SDL_Rect* pSDLRect,
                          const uint8_t* pYplane, int cbYpitch,
                          const uint8_t* pUplane, int cbUpitch,
-                         const uint8_t* pVplane, int cbVpitch)
+                         const uint8_t* pVplane, int cbVpitch) noexcept
 {
     return (SDL_UpdateYUVTexture(get_Handle(), pSDLRect, pYplane, cbYpitch,
                                  pUplane, cbUpitch, pVplane, cbVpitch) == 0);

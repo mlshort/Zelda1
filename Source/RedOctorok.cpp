@@ -29,14 +29,14 @@
 #include "RedOctorok.h"
 
 
-CRedOctorok::~CRedOctorok(void) noexcept
+CRedOctorok::~CRedOctorok(void)
 {
 #ifdef _DEBUG
     util::DebugTrace(_T("%S \n"), __FUNCTION__);
 #endif
 }
 
-void CRedOctorok::Update(float fDeltaTime)
+void CRedOctorok::Update(float fDeltaTime) noexcept
 {
     Move(fDeltaTime);
     Turn(fDeltaTime);

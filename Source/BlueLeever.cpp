@@ -35,7 +35,7 @@ CBlueLeever::~CBlueLeever()
 #endif
 }
 
-void CBlueLeever::Update(float fDeltaTime)
+void CBlueLeever::Update(float fDeltaTime) noexcept
 {
     Move(fDeltaTime);
     Turn(fDeltaTime);

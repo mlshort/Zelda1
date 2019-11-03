@@ -47,7 +47,7 @@ CGraphicsDevice::~CGraphicsDevice()
     }
 }
 
-bool CGraphicsDevice::ShutDown(void)
+bool CGraphicsDevice::ShutDown(void) noexcept
 {
     //Free the window
     if (m_pMainWindow)

@@ -111,7 +111,7 @@ struct __declspec(novtable) TSDLHandle_Base
         return *this;
     }
 
-    void Destroy(void)
+    void Destroy(void) noexcept
     {
         static_cast< Derived* >(this)->Destroy();
     }

@@ -54,12 +54,12 @@ class CInputDevice
     std::vector<bool>          m_KeyStates;
 
 public:
-    CInputDevice(void)
+    CInputDevice(void) noexcept
         : m_KeyStates( GAME_NUM_EVENTS, false )
     { };
 
     /// Default Destructor
-    ~CInputDevice(void) noexcept;
+    ~CInputDevice(void);
 
     bool Initialize     (void) noexcept;
 /**

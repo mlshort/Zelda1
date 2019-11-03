@@ -39,7 +39,7 @@ struct LEVEL_DATA
     { };
 
     /// Copy constructor
-    constexpr LEVEL_DATA( const LEVEL_DATA& othr ) noexcept
+    constexpr LEVEL_DATA( const LEVEL_DATA& othr )
         : m_strName       ( othr.m_strName ),
           m_fX            ( othr.m_fX ),
           m_fY            ( othr.m_fY ),
@@ -55,7 +55,7 @@ struct LEVEL_DATA
     { };
 
     /// Assignment operator
-    LEVEL_DATA& operator=(const LEVEL_DATA& rhs) noexcept
+    LEVEL_DATA& operator=(const LEVEL_DATA& rhs)
     {
         if (this != &rhs)
         {
@@ -85,7 +85,7 @@ struct OBJECT_DATA
     { };
 
     /// copy constructor
-    constexpr OBJECT_DATA( const OBJECT_DATA& othr ) noexcept
+    constexpr OBJECT_DATA( const OBJECT_DATA& othr )
         : m_strName       ( othr.m_strName ),
           m_strSpritePath ( othr.m_strSpritePath )
     { };
@@ -96,7 +96,7 @@ struct OBJECT_DATA
           m_strSpritePath(std::move(othr.m_strSpritePath))
     { };
     /// assignment operator
-    OBJECT_DATA& operator=(const OBJECT_DATA& rhs ) noexcept
+    OBJECT_DATA& operator=(const OBJECT_DATA& rhs )
     {
         if (this != &rhs)
         {

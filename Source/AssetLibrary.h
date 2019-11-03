@@ -60,7 +60,7 @@ protected:
     std::map<tstring, smart_ptr >    m_mapAssets;
 
 public:
-    constexpr TAssetLibrary(void)
+    constexpr TAssetLibrary(void) noexcept
         : m_pAssetFactory(std::make_unique<_TFactory>()),
           m_mapAssets()
     { };

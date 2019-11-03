@@ -149,7 +149,7 @@ bool CGame::Reset(void) noexcept
     return true;
 }
 
-bool CGame::Run(void) noexcept
+bool CGame::Run(void)
 {
     bool bQuit   = false;
     auto tmDelta = m_pTimer->GetTimeSinceLastFrame();
@@ -219,7 +219,7 @@ void CGame::Render(void) noexcept
     }
 }
 
-void CGame::OnTabKeyEvent(GAME_EVENT /*evt*/) noexcept
+void CGame::OnTabKeyEvent(GAME_EVENT /*evt*/)
 {
     auto nNumActors = m_rgActors.size();
 

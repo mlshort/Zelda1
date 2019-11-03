@@ -50,13 +50,13 @@ public:
     {};
 
 
-    virtual void OnParseInit(CXmlParser* pParser)
+    void OnParseInit(CXmlParser* pParser) override
     { m_pParser = pParser; };
 
     virtual void OnAttribute  (const TCHAR* pszName, const TCHAR* pszValue) = 0;
     virtual void OnElementInit(const TCHAR* pszName) = 0;
 
-    constexpr const std::vector<_TData>& GetData(void) const
+    constexpr const std::vector<_TData>& GetData(void) const noexcept
     { return m_rgData; };
 };
 
@@ -71,8 +71,8 @@ public:
 
     ~CXmlLevelDataHandler() = default;
 
-    virtual void OnAttribute  (const TCHAR* pszName, const TCHAR* pszValue);
-    virtual void OnElementInit(const TCHAR* pszName);
+    void OnAttribute  (const TCHAR* pszName, const TCHAR* pszValue) override;
+    void OnElementInit(const TCHAR* pszName) override;
 };
 
 class CXmlObjectDataHandler
@@ -85,7 +85,7 @@ public:
 
     ~CXmlObjectDataHandler() = default;
 
-    virtual void OnAttribute  (const TCHAR* pszName, const TCHAR* pszValue);
-    virtual void OnElementInit(const TCHAR* pszName);
+    void OnAttribute  (const TCHAR* pszName, const TCHAR* pszValue) override;
+    void OnElementInit(const TCHAR* pszName) override;
 };
 #endif

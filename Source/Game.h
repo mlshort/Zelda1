@@ -118,7 +118,7 @@ public:
 { };
 
     /// Default Destructor
-    ~CGame(void) noexcept;
+    ~CGame(void);
 
     bool Initialize    (void);
 
@@ -126,7 +126,7 @@ public:
 
     bool Reset         (void) noexcept;
 
-    bool Run           (void) noexcept;
+    bool Run           (void);
 
     bool LoadLevelFile (const TCHAR* szLevelConfigFileName);
 
@@ -138,7 +138,7 @@ private:
 
 ///////////////////////////////////////////////////////////////////////////////
 //  Internal Event Handlers
-    void OnTabKeyEvent    (GAME_EVENT evt) noexcept;
+    void OnTabKeyEvent    (GAME_EVENT evt);
     void OnScrollKeyEvent (GAME_EVENT evt) noexcept;
     void OnViewResizeEvent(int iX, int iY) noexcept;
     void OnSpaceKeyEvent  (void) noexcept;

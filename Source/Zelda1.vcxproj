@@ -152,7 +152,7 @@
     <LibraryPath>$(SolutionDir)ThirdParty\SDL2.0.5\Bin\$(Platform);$(SolutionDir)ThirdParty\SDL_Image2.0.1\Bin\$(Platform);$(LibraryPath)</LibraryPath>
     <LinkIncremental>false</LinkIncremental>
     <TargetName>$(ProjectName)D</TargetName>
-    <CodeAnalysisRuleSet>..\..\..\NativeRuleSet.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSet>..\..\..\..\MyNativeRecommendedRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <OutDir>$(SolutionDir)Game\</OutDir>

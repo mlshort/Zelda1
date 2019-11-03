@@ -61,7 +61,7 @@ public:
     /**
      *  @brief Destroys & clears the underlying SDL resource
      */
-    void               Destroy (void);
+    void               Destroy (void) noexcept;
 
     /**
      *  @brief Creates the underlying SDL Window context
@@ -108,7 +108,7 @@ public:
     /**
      *  @brief Gets the SDL rendering context associated with this window.
      */
-    SDL_Renderer*   GetRenderer(void);
+    SDL_Renderer*   GetRenderer(void) noexcept;
 
     /**
      *  @brief Get the SDL surface context associated with the window.
@@ -120,7 +120,7 @@ public:
      *  @retval nullptr       on error.
      *
      */
-    SDL_Surface*    GetSurface(void);
+    SDL_Surface*    GetSurface(void) noexcept;
 
     /**
      *  @brief Set the position of the underlying SDL Window context
@@ -137,7 +137,7 @@ public:
      *
      *  @sa https://wiki.libsdl.org/SDL_SetWindowPosition
      */
-    bool            SetPosition(int iX, int iY);
+    bool            SetPosition(int iX, int iY) noexcept;
 
 ///////////////////////////////////////////////////////////////////////////////
 // disabling the copy constructor and assignment operator

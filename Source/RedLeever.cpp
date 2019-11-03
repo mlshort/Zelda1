@@ -35,7 +35,7 @@ CRedLeever::~CRedLeever()
 #endif
 }
 
-void CRedLeever::Update(float fDeltaTime)
+void CRedLeever::Update(float fDeltaTime) noexcept
 {
     Move(fDeltaTime);
     Turn(fDeltaTime);

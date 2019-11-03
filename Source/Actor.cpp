@@ -52,7 +52,7 @@ CActor::CActor(CActor&& oth) noexcept
 //    m_pTexture.swap(oth.m_pTexture);  // take ownership
 }
 
-CActor::~CActor(void) noexcept
+CActor::~CActor(void)
 {
 #ifdef _DEBUG
     util::DebugTrace(_T("%S \n"), __FUNCTION__);

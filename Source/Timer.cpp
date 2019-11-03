@@ -35,7 +35,7 @@ CTimer::~CTimer(void) noexcept
     SDL_QuitSubSystem(SDL_INIT_TIMER);
 }
 
-bool CTimer::Initialize(void)
+bool CTimer::Initialize(void) noexcept
 {
     bool bResult = (SDL_InitSubSystem(SDL_INIT_TIMER) == 0);
 
@@ -47,7 +47,7 @@ bool CTimer::Initialize(void)
     return bResult;
 };
 
-void CTimer::Start(void)
+void CTimer::Start(void) noexcept
 {
     //Start the timer
     m_bStarted = true;
@@ -73,7 +73,7 @@ void CTimer::Stop(void) noexcept
     m_dwPausedTicks = 0;
 }
 
-void CTimer::Pause(void)
+void CTimer::Pause(void) noexcept
 {
     //If the timer is running and isn't already paused
     if ( m_bStarted && !m_bPaused )
@@ -87,7 +87,7 @@ void CTimer::Pause(void)
     }
 }
 
-void CTimer::Resume(void)
+void CTimer::Resume(void) noexcept
 {
     //If the timer is paused
     if ( m_bStarted && m_bPaused )
@@ -103,7 +103,7 @@ void CTimer::Resume(void)
     }
 }
 
-uint32_t CTimer::GetTicks(void) const
+uint32_t CTimer::GetTicks(void) const noexcept
 {
     // If the timer is running
     if( m_bStarted == true )
@@ -135,12 +135,12 @@ void CTimer::fpsRegulate(void)
     }
 }
 
-uint32_t CTimer::GetTimeSinceInit(void) const
+uint32_t CTimer::GetTimeSinceInit(void) const noexcept
 {
     return SDL_GetTicks();
 }
 
-uint32_t CTimer::GetTimeSinceLastFrame(void)
+uint32_t CTimer::GetTimeSinceLastFrame(void) noexcept
 {
     if (m_bStarted && !m_bPaused)
     {

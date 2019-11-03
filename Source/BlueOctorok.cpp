@@ -35,7 +35,7 @@ CBlueOctorok::~CBlueOctorok()
 #endif
 }
 
-void CBlueOctorok::Update(float fDeltaTime)
+void CBlueOctorok::Update(float fDeltaTime) noexcept
 {
     Move(fDeltaTime);
     Turn(fDeltaTime);

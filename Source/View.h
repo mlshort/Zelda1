@@ -86,18 +86,18 @@ public:
 
 ///////////////////////////////////////////////////////////////////////////////
 // Accessors
-    inline constexpr const auto&       get_Posn(void) const noexcept;
-    inline constexpr auto              get_PosnX(void) const noexcept;
-    inline constexpr auto              get_PosnY(void) const noexcept;
+    constexpr const auto&              get_Posn(void) const noexcept;
+    constexpr auto                     get_PosnX(void) const noexcept;
+    constexpr auto                     get_PosnY(void) const noexcept;
 
     inline void                        set_Posn(const point_t& ptSet) noexcept;
     inline void                        set_PosnX(num_t nSet) noexcept;
     inline void                        set_PosnY(num_t nSet) noexcept;
     inline void                       incr_Posn(const point_t& ptDelta) noexcept;
 
-    inline constexpr const auto&       get_Center(void) const noexcept;
-    inline constexpr auto              get_CenterX(void) const noexcept;
-    inline constexpr auto              get_CenterY(void) const noexcept;
+    constexpr const auto&              get_Center(void) const noexcept;
+    constexpr auto                     get_CenterX(void) const noexcept;
+    constexpr auto                     get_CenterY(void) const noexcept;
 
 private:
     inline void                        set_Center(const point_t& ptSet) noexcept;
@@ -106,7 +106,7 @@ private:
 
     inline void                       incr_Center(const point_t& ptDelta) noexcept;
 
-    void Print        (void);
+    void Print        (void) noexcept;
 
 ///////////////////////////////////////////////////////////////////////////////
 // disabling the copy constructor and assignment operator

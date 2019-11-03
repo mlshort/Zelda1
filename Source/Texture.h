@@ -98,7 +98,7 @@ public:
     CTexture& operator=(CTexture&& rhs) noexcept;
 
     /// Deallocates managed SDL resource
-    void Destroy(void);
+    void Destroy(void) noexcept;
 
     /// Returns Image Width
     constexpr inline int GetWidth(void) const noexcept
@@ -120,7 +120,7 @@ public:
     bool Load(CRenderer* pRenderer, const TCHAR* szPath );
 
     /// Set color modulation
-    bool SetColor(uint8_t nRed, uint8_t nGreen, uint8_t nBlue);
+    bool SetColor(uint8_t nRed, uint8_t nGreen, uint8_t nBlue) noexcept;
 
     /// Renders texture at given point
     bool Render  (CRenderer* pRenderer, int iX, int iY, const SDL_Rect* pSDLRect = nullptr );
@@ -156,7 +156,7 @@ public:
     *                           is not supported
     *
     */
-    bool SetColorMod(uint8_t nRed, uint8_t nGreen, uint8_t nBlue);
+    bool SetColorMod(uint8_t nRed, uint8_t nGreen, uint8_t nBlue) noexcept;
 
     /**
     *  @brief Get the additional color value used in render copy operations.
@@ -169,7 +169,7 @@ public:
     *  @retval false            on error or if the texture is not valid.
     *
     */
-    bool GetColorMod(uint8_t& nRed, uint8_t& nGreen, uint8_t& nBlue);
+    bool GetColorMod(uint8_t& nRed, uint8_t& nGreen, uint8_t& nBlue) noexcept;
 
     /**
     *  @brief Set an additional alpha value used in render copy operations.
@@ -180,7 +180,7 @@ public:
     *  @retval false            if the texture is not valid or alpha modulation
     *                           is not supported.
     */
-    bool SetAlphaMod(uint8_t alpha);
+    bool SetAlphaMod(uint8_t alpha) noexcept;
 
     /**
     *  @brief Get the additional alpha value used in render copy operations.
@@ -191,7 +191,7 @@ public:
     *  @retval false            on error or if the texture is not valid.
     *
     */
-    bool GetAlphaMod(uint8_t& alpha);
+    bool GetAlphaMod(uint8_t& alpha) noexcept;
 
     /**
     *  @brief Update the given texture rectangle with new pixel data.
@@ -207,7 +207,7 @@ public:
     *
     *  @note This is a fairly slow function.
     */
-    bool Update(const SDL_Rect* pSDLRect, const void* pPixels, int cbPitch);
+    bool Update(const SDL_Rect* pSDLRect, const void* pPixels, int cbPitch) noexcept;
 
     /**
     *  @brief Update a rectangle within a planar YV12 or IYUV texture with new pixel data.
@@ -228,7 +228,7 @@ public:
     bool UpdateYUV(const SDL_Rect* pSDLRect,
                     const uint8_t* pYplane, int cbYpitch,
                     const uint8_t* pUplane, int cbUpitch,
-                    const uint8_t* pVplane, int cbVpitch);
+                    const uint8_t* pVplane, int cbVpitch) noexcept;
 
     /**
     *  @brief Lock a portion of the texture for write-only pixel access.

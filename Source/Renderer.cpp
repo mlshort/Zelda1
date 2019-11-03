@@ -33,7 +33,7 @@ CRenderer::~CRenderer()
 }
 
 // @sa https://wiki.libsdl.org/SDL_DestroyRenderer
-void CRenderer::Destroy(void)
+void CRenderer::Destroy(void) noexcept
 {
     if (m_hSDL)
     {
@@ -60,7 +60,7 @@ bool CRenderer::Present(void) noexcept
     return bReturn;
 };
 
-bool CRenderer::SetViewPort(const SDL_Rect& rect)
+bool CRenderer::SetViewPort(const SDL_Rect& rect) noexcept
 {
     return (SDL_RenderSetViewport(get_Handle(), &rect) == 0);
 };
@@ -78,7 +78,7 @@ bool CRenderer::CopyEx(SDL_Texture* pSDLTexture, const SDL_Rect* pSrcRect, const
 };
 
 
-bool CRenderer::GetOutputSize(int& iWidth, int& iHeight)
+bool CRenderer::GetOutputSize(int& iWidth, int& iHeight) noexcept
 {
     if (get_Handle())
         return (SDL_GetRendererOutputSize(get_Handle(), &iWidth, &iHeight) == 0);
@@ -86,7 +86,7 @@ bool CRenderer::GetOutputSize(int& iWidth, int& iHeight)
         return false;
 }
 
-bool CRenderer::GetInfo(SDL_RendererInfo& info)
+bool CRenderer::GetInfo(SDL_RendererInfo& info) noexcept
 {
     if (get_Handle())
         return (SDL_GetRendererInfo(get_Handle(), &info) == 0);
@@ -102,7 +102,7 @@ SDL_Texture* CRenderer::CreateTextureFromSurface(SDL_Surface* pSDLSurface)
         return nullptr;
 };
 
-bool CRenderer::SetDrawColor(uint8_t nRed, uint8_t nGreen, uint8_t nBlue, uint8_t nAlpha)
+bool CRenderer::SetDrawColor(uint8_t nRed, uint8_t nGreen, uint8_t nBlue, uint8_t nAlpha) noexcept
 {
     if (get_Handle())
         return (SDL_SetRenderDrawColor(get_Handle(), nRed, nGreen, nBlue, nAlpha) == 0);

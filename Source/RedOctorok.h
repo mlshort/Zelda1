@@ -60,11 +60,11 @@ public:
     {};
 
     /// Default Destructor
-    virtual ~CRedOctorok() noexcept;
+    virtual ~CRedOctorok();
 /////////////////////////////////////////////////////////////////////////////
 //  Base class pure virtual methods
-    virtual void Update(float fDeltaTime);
-    virtual void Render(const CView* pWhere) const;
+    void Update(float fDeltaTime) noexcept override;
+    void Render(const CView* pWhere) const override;
 
 private:
     void         Move (float fDeltaTime) noexcept;

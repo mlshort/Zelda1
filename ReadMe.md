@@ -119,7 +119,8 @@ Implementation Specifics
   * RED & BLUE LEEVERS : points in the direction they are moving.
 
 3. The program was implemented as a Windows Application and not a Console.
-* The console window looked cheesy and I don't have any use for it as my debug output is handled by a connected debugger via the Windows API OutputDebugString.
+
+  * The console window looked cheesy and I don't have any use for it as my debug output is handled by a connected debugger via the Windows API OutputDebugString.
 
 Issues Encountered
 ==================

@@ -107,7 +107,7 @@ Implementation Specifics
 
    *  UP, DOWN, LEFT, RIGHT : scrolls the view
    *  TAB : changes view focus and centers camera on next CActor
-   *  - this appropriately handles changing the Windows size.
+   *  \- : appropriately handles changing the Windows size.
    *  ESCAPE : exits the application
    *  SPACEBAR : pauses and resumes application
 

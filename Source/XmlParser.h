@@ -11,7 +11,7 @@
  *  <b>Assignment:</b> Zelda1 Project
  *
  *  <b>Cite:</b>
- *              fixed & enhanced sample by originally by Bjarke Viksoe
+ *              fixed & enhanced XML Parsing sample originally by Bjarke Viksoe
  *  @sa https://www.viksoe.dk/code
  */
 

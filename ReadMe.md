@@ -1,9 +1,9 @@
-Zelda1: Quest 1
+# Zelda1: Quest 1
 
 Directory Structure
 ====================
 
-```<language>
+```
 Zelda1 (Solution File)
   |
   +-- Assets
@@ -105,22 +105,22 @@ Implementation Specifics
 ========================
 1. Keyboard Events  
 
-  * UP, DOWN, LEFT, RIGHT : scrolls the view
-  * TAB : changes view focus and centers camera on next CActor
-  * - this appropriately handles changing the Windows size.
-  * ESCAPE : exits the application
-  * SPACEBAR : pauses and resumes application
+   *  UP, DOWN, LEFT, RIGHT : scrolls the view
+   *  TAB : changes view focus and centers camera on next CActor
+   *  - this appropriately handles changing the Windows size.
+   *  ESCAPE : exits the application
+   *  SPACEBAR : pauses and resumes application
 
 2. Agent Movement(s)
 
-  * RED OCTOROK : A big circle with a randomly determined radius.
-  * All others : In the direction, determined by the Angle given from the XML file, at a random speed, for a random distance (and then returning).
-  * BLUE OCTOROK : Spins while moving.
-  * RED & BLUE LEEVERS : points in the direction they are moving.
+   *  RED OCTOROK : A big circle with a randomly determined radius.
+   *  All others : In the direction, determined by the Angle given from the XML file, at a random speed, for a random distance (and then returning).
+   *  BLUE OCTOROK : Spins while moving.
+   *  RED & BLUE LEEVERS : points in the direction they are moving.
 
 3. The program was implemented as a Windows Application and not a Console.
 
-  * The console window looked cheesy and I don't have any use for it as my debug output is handled by a connected debugger via the Windows API OutputDebugString.
+   *  The console window looked cheesy and I don't have any use for it as my debug output is handled by a connected debugger via the Windows API OutputDebugString.
 
 Issues Encountered
 ==================

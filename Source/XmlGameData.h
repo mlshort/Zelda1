@@ -39,7 +39,7 @@ struct LEVEL_DATA
     { };
 
     /// Copy constructor
-    constexpr LEVEL_DATA( const LEVEL_DATA& othr )
+    LEVEL_DATA( const LEVEL_DATA& othr )
         : m_strName       ( othr.m_strName ),
           m_fX            ( othr.m_fX ),
           m_fY            ( othr.m_fY ),
@@ -47,7 +47,7 @@ struct LEVEL_DATA
     { };
 
     /// Move constructor
-    constexpr LEVEL_DATA(LEVEL_DATA&& othr) noexcept
+    LEVEL_DATA(LEVEL_DATA&& othr) noexcept
         : m_strName(std::move(othr.m_strName)),
           m_fX(othr.m_fX),
           m_fY(othr.m_fY),
@@ -59,11 +59,24 @@ struct LEVEL_DATA
     {
         if (this != &rhs)
         {
-
             m_strName  = rhs.m_strName;
             m_fX       = rhs.m_fX;
             m_fY       = rhs.m_fY;
             m_fAngle   = rhs.m_fAngle;
+        }
+        return *this;
+    };
+
+    /// Move Assignment operator
+    LEVEL_DATA& operator=(LEVEL_DATA&& rhs) noexcept
+    {
+        if (this != &rhs)
+        {
+            m_strName.clear();
+            m_strName.swap(rhs.m_strName);
+            m_fX     = rhs.m_fX;
+            m_fY     = rhs.m_fY;
+            m_fAngle = rhs.m_fAngle;
         }
         return *this;
     };

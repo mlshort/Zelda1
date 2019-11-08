@@ -46,11 +46,11 @@ public:
           m_rgData()
     {};
 
-    virtual ~TXmlDataHandler()
+    virtual ~TXmlDataHandler() noexcept
     {};
 
 
-    void OnParseInit(CXmlParser* pParser) override
+    void OnParseInit(CXmlParser* pParser) noexcept override
     { m_pParser = pParser; };
 
     virtual void OnAttribute  (const TCHAR* pszName, const TCHAR* pszValue) = 0;
@@ -69,7 +69,8 @@ public:
         : TXmlDataHandler()
     { };
 
-    ~CXmlLevelDataHandler() = default;
+    virtual ~CXmlLevelDataHandler() noexcept
+    { };
 
     void OnAttribute  (const TCHAR* pszName, const TCHAR* pszValue) override;
     void OnElementInit(const TCHAR* pszName) override;
@@ -83,7 +84,8 @@ public:
         : TXmlDataHandler()
     { };
 
-    ~CXmlObjectDataHandler() = default;
+    virtual ~CXmlObjectDataHandler() noexcept
+    { };
 
     void OnAttribute  (const TCHAR* pszName, const TCHAR* pszValue) override;
     void OnElementInit(const TCHAR* pszName) override;

@@ -76,7 +76,7 @@ struct __declspec(novtable) TSDLHandle_Base
         return h;
     };
 
-    SDL_HANDLE get_Handle(void) noexcept
+    constexpr SDL_HANDLE get_Handle(void) noexcept
     {
         return m_hSDL;
     };
@@ -116,7 +116,7 @@ struct __declspec(novtable) TSDLHandle_Base
         static_cast< Derived* >(this)->Destroy();
     }
 
-    ~TSDLHandle_Base(void)
+    ~TSDLHandle_Base(void) noexcept
     {
         if (m_bDestroyOnDelete)
             Destroy();

@@ -35,7 +35,7 @@
 #include "GraphicsDevice.h"
 
 
-CGraphicsDevice::~CGraphicsDevice()
+CGraphicsDevice::~CGraphicsDevice() noexcept
 {
 #ifdef _DEBUG
     util::DebugTrace(_T("%S \n"), __FUNCTION__);

@@ -1,7 +1,0 @@
-<?xml version="1.0" ?>
-<Objects>
-  <Creature name="Red Leever" sprite="./Assets/Images/arrow_r.png"/>
-  <Creature name="Blue Leever" sprite="./Assets/Images/arrow_b.png"/>
-  <Creature name="Red Octorok" sprite="./Assets/Images/octorok_r.png"/>
-  <Creature name="Blue Octorok" sprite="./Assets/Images/octorok_b.png"/>
-</Objects>

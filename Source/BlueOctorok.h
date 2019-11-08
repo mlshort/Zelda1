@@ -57,7 +57,7 @@ public:
     {};
 
     /// Default Destructor
-    virtual ~CBlueOctorok();
+    virtual ~CBlueOctorok() noexcept;
 
 /////////////////////////////////////////////////////////////////////////////
 //  Base class pure virtual methods

@@ -45,7 +45,7 @@ public:
           m_bStarted( false )
     { };
     /// Default Destructor
-    ~CTimer(void);
+    ~CTimer(void) noexcept;
 
 
     bool Initialize(void) noexcept;
@@ -80,7 +80,7 @@ public:
     { return (m_bStarted && m_bPaused); };
 
     // Wait a specified number of milliseconds before returning
-    void fpsRegulate(void);
+    void fpsRegulate(void) noexcept;
 
 
 /////////////////////////////////////////////////////////////////////////

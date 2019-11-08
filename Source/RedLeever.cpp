@@ -28,7 +28,7 @@
 #include "RedLeever.h"
 
 
-CRedLeever::~CRedLeever()
+CRedLeever::~CRedLeever() noexcept
 {
 #ifdef _DEBUG
     util::DebugTrace(_T("%S \n"), __FUNCTION__);

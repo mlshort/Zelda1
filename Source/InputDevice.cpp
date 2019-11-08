@@ -35,7 +35,7 @@ void       PrintKeyDownEvent        (const SDL_Event& sdlEvt) noexcept;
 void       PrintMouseButtonDownEvent(const SDL_Event& sdlEvt) noexcept;
 void       PrintWindowEvent         (const SDL_Event& sdlEvt) noexcept;
 
-CInputDevice::~CInputDevice(void)
+CInputDevice::~CInputDevice(void) noexcept
 {
 #ifdef _DEBUG
     util::DebugTrace(_T("%S \n"), __FUNCTION__);

@@ -71,7 +71,7 @@ public:
     { };
 
     /// Default Destructor
-    virtual ~CGameAssetLibrary();
+    virtual ~CGameAssetLibrary() noexcept;
 
     bool                    Initialize(void) noexcept;
 

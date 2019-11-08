@@ -27,7 +27,7 @@
 #include "ArtAssetLibrary.h"
 
 
-CArtAssetLibrary::~CArtAssetLibrary(void)
+CArtAssetLibrary::~CArtAssetLibrary(void) noexcept
 {
 #ifdef _DEBUG
     util::DebugTrace(_T("%S \n"), __FUNCTION__);

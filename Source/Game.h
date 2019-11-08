@@ -105,14 +105,14 @@ class CGame
 
 public:
     /// Default Constructor
-    CGame(void)
+    CGame(void) noexcept
     : m_dwGameTime       (),
-      m_pGameAssetLibrary(std::make_unique<CGameAssetLibrary>()),
-      m_pArtAssetLibrary (std::make_unique<CArtAssetLibrary>()),
-      m_pGraphicsDevice  (std::make_unique<CGraphicsDevice>(g_SCREEN_WIDTH, g_SCREEN_HEIGHT)),
-      m_pInputDevice     (std::make_unique<CInputDevice>()),
-      m_pTimer           (std::make_unique<CTimer>()),
-      m_pView            (std::make_unique<CView>()),
+      m_pGameAssetLibrary(),
+      m_pArtAssetLibrary (),
+      m_pGraphicsDevice  (),
+      m_pInputDevice     (),
+      m_pTimer           (),
+      m_pView            (),
       m_nActorFocus      (INVALID_ACTOR),
       m_rgActors()
 { };

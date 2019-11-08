@@ -58,7 +58,7 @@ public:
     {};
 
     /// Default Destructor
-    virtual ~CBlueLeever();
+    virtual ~CBlueLeever() noexcept;
 
 /////////////////////////////////////////////////////////////////////////////
 //  Base class pure virtual methods

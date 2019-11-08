@@ -25,7 +25,7 @@
 
 #include "FileStream.h"
 
-CFileStream::~CFileStream(void)
+CFileStream::~CFileStream(void) noexcept
 {
     if (m_hFile != INVALID_HANDLE_VALUE)
     {

@@ -44,12 +44,12 @@ struct ATTRIBUTE
           m_strValue()
     { };
 
-    constexpr explicit ATTRIBUTE( const wchar_t* szName )
+    explicit ATTRIBUTE( const wchar_t* szName )
         : m_strName( szName ),
           m_strValue()
     { };
 
-    constexpr explicit ATTRIBUTE( const wchar_t* szName, const wchar_t* szValue )
+    explicit ATTRIBUTE( const wchar_t* szName, const wchar_t* szValue )
         : m_strName( szName ),
           m_strValue( szValue)
     { };

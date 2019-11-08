@@ -54,7 +54,7 @@ public:
     { };
 
     /// Default Destructor
-    ~CWindow();
+    ~CWindow() noexcept;
 
     bool Initialize(bool bFullScreen) noexcept;
 
@@ -77,7 +77,7 @@ public:
      *  @retval true        if the window was created window
      *  @retval false       if window creation failed.
      */
-    bool           Create        (const char* szName, int iX, int iY, int iWidth, int iHeight);
+    bool           Create        (const char* szName, int iX, int iY, int iWidth, int iHeight) noexcept;
 
     /**
      *  @brief Create a 2D SDL rendering context for this window.
@@ -91,7 +91,7 @@ public:
      *
      *  @sa https://wiki.libsdl.org/SDL_CreateRenderer
      */
-    SDL_Renderer*  CreateRenderer(int iIndex, unsigned int flags);
+    SDL_Renderer*  CreateRenderer(int iIndex, unsigned int flags) noexcept;
 
     /**
      *  @brief Create a 2D CRenderer object for this window

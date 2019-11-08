@@ -60,7 +60,7 @@ public:
     {};
 
     /// Default Destructor
-    virtual ~CRedOctorok();
+    virtual ~CRedOctorok() noexcept;
 /////////////////////////////////////////////////////////////////////////////
 //  Base class pure virtual methods
     void Update(float fDeltaTime) noexcept override;

@@ -28,7 +28,7 @@
 #include "BlueOctorok.h"
 
 
-CBlueOctorok::~CBlueOctorok()
+CBlueOctorok::~CBlueOctorok() noexcept
 {
 #ifdef _DEBUG
     util::DebugTrace(_T("%S \n"), __FUNCTION__);

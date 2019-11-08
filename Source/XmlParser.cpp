@@ -38,7 +38,7 @@
 #endif
 
 
-CXmlParser::~CXmlParser()
+CXmlParser::~CXmlParser() noexcept
 {
     Destroy();
 }

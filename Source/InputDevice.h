@@ -59,7 +59,7 @@ public:
     { };
 
     /// Default Destructor
-    ~CInputDevice(void);
+    ~CInputDevice(void) noexcept;
 
     bool Initialize     (void) noexcept;
 /**

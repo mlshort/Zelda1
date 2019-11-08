@@ -27,7 +27,7 @@
 #include "Window.h"
 
 
-CWindow::~CWindow()
+CWindow::~CWindow() noexcept
 {
 #ifdef _DEBUG
     util::DebugTrace(_T("%S \n"), __FUNCTION__);
@@ -50,7 +50,7 @@ bool CWindow::Initialize(bool bFullScreen) noexcept
     return true;
 }
 
-bool CWindow::Create(const char* szName, int iX, int iY, int iWidth, int iHeight)
+bool CWindow::Create(const char* szName, int iX, int iY, int iWidth, int iHeight) noexcept
 {
     Attach (SDL_CreateWindow(szName, iX, iY,
                              iWidth, iHeight,
@@ -60,7 +60,7 @@ bool CWindow::Create(const char* szName, int iX, int iY, int iWidth, int iHeight
     return (get_Handle() != nullptr);
 }
 
-SDL_Renderer*  CWindow::CreateRenderer(int iIndex, unsigned int nFlags)
+SDL_Renderer*  CWindow::CreateRenderer(int iIndex, unsigned int nFlags) noexcept
 {
     return get_Handle() ? SDL_CreateRenderer(get_Handle(), iIndex, nFlags) : nullptr;
 }

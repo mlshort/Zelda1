@@ -29,7 +29,7 @@
 
 #include "Texture.h"
 
-CTexture::~CTexture()
+CTexture::~CTexture() noexcept
 {
 #ifdef _DEBUG
     util::DebugTrace(_T("%S \n"), __FUNCTION__);
@@ -82,7 +82,6 @@ void CTexture::Destroy(void) noexcept
             m_iWidth           = rhs.m_iWidth;
             m_iHeight          = rhs.m_iHeight;
             m_bDestroyOnDelete = rhs.m_bDestroyOnDelete;
-
         }
         return *this;
     };
@@ -226,7 +225,7 @@ bool CTexture::Render(CRenderer* pRenderer, const CView* pView, int iX, int iY, 
 
 
 
-bool CTexture::Query(uint32_t& nFormat, int& iAccess, int& iWidth, int& iHeight)
+bool CTexture::Query(uint32_t& nFormat, int& iAccess, int& iWidth, int& iHeight) noexcept
 {
     return (SDL_QueryTexture(get_Handle(), &nFormat, &iAccess, &iWidth, &iHeight) == 0);
 };
@@ -266,12 +265,12 @@ bool CTexture::UpdateYUV(const SDL_Rect* pSDLRect,
                                  pUplane, cbUpitch, pVplane, cbVpitch) == 0);
 };
 
-bool CTexture::Lock(const SDL_Rect* pSDLRect, void** ppPixels, int& nPitch)
+bool CTexture::Lock(const SDL_Rect* pSDLRect, void** ppPixels, int& nPitch) noexcept
 {
     return (SDL_LockTexture(get_Handle(), pSDLRect, ppPixels, &nPitch) == 0);
 };
 
-bool CTexture::Unlock(void)
+bool CTexture::Unlock(void) noexcept
 {
     bool bReturn = false;
 

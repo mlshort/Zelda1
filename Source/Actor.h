@@ -143,7 +143,7 @@ public:
     /// Move Constructor
     CActor(CActor&& othr) noexcept;
     /// Default Destructor
-    virtual  ~CActor(void);
+    virtual  ~CActor(void) noexcept;
     /// Assignment Operator
     CActor& operator=(const CActor& rhs) noexcept;
     /// Move Assignment Operator

@@ -58,7 +58,7 @@ public:
     {};
 
     /// Default Destructor
-    virtual ~CRedLeever();
+    virtual ~CRedLeever() noexcept;
 
 /////////////////////////////////////////////////////////////////////////////
 //  Base class pure virtual methods

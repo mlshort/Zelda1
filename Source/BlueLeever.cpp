@@ -28,7 +28,7 @@
 #include "BlueLeever.h"
 
 
-CBlueLeever::~CBlueLeever()
+CBlueLeever::~CBlueLeever() noexcept
 {
 #ifdef _DEBUG
     util::DebugTrace(_T("%S \n"), __FUNCTION__);

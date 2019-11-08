@@ -62,7 +62,7 @@ public:
     { };
 
    /// Default Destructor
-    virtual ~CArtAssetLibrary(void);
+    virtual ~CArtAssetLibrary(void) noexcept;
 
     /**
      * @brief This function sets the graphic's device for the library.

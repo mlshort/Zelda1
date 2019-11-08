@@ -97,6 +97,25 @@ bool CGame::Initialize(void)
 {
     SDL_InitSubSystem(SDL_INIT_EVENTS);
 
+    if (m_pGameAssetLibrary == nullptr)
+        m_pGameAssetLibrary = std::make_unique<CGameAssetLibrary>();
+    
+    if (m_pArtAssetLibrary == nullptr)
+        m_pArtAssetLibrary = std::make_unique<CArtAssetLibrary>();
+
+    if (m_pGraphicsDevice == nullptr)
+        m_pGraphicsDevice = std::make_unique<CGraphicsDevice>(g_SCREEN_WIDTH, g_SCREEN_HEIGHT);
+
+    if (m_pInputDevice == nullptr)
+        m_pInputDevice = std::make_unique<CInputDevice>();
+
+    if (m_pTimer == nullptr)
+        m_pTimer = std::make_unique<CTimer>();
+
+    if (m_pView == nullptr)
+        m_pView = std::make_unique<CView>();
+
+
     if (m_pTimer)
         m_pTimer->Initialize();
     else
@@ -116,9 +135,6 @@ bool CGame::Initialize(void)
         m_pInputDevice->Initialize();
     else
         return false;
-
-    if (m_pView == nullptr)
-        m_pView = std::make_unique<CView>();
 
     if (m_pView)
         m_pView->Initialize(0, 0, g_SCREEN_WIDTH, g_SCREEN_HEIGHT);

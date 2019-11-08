@@ -56,7 +56,7 @@ public:
     { };
 
     /// Default Destructor
-    ~CRenderer();
+    ~CRenderer() noexcept;
 
    /**
     *  @brief Clear the current rendering target with the drawing color
@@ -104,7 +104,7 @@ public:
      *  @retval true                    on success
      *  @retval false                   on error
      */
-    bool Copy       (SDL_Texture* pSDLTexture, const SDL_Rect* pSrcRect = nullptr, const SDL_Rect* pDestRect = nullptr);
+    bool Copy       (SDL_Texture* pSDLTexture, const SDL_Rect* pSrcRect = nullptr, const SDL_Rect* pDestRect = nullptr) noexcept;
 
     /**
      *  @brief Copy a portion of the source texture to the current rendering target, rotating it by angle around the given center
@@ -124,7 +124,7 @@ public:
      *  @retval false   on error
      */
     bool CopyEx     (SDL_Texture* pSDLTexture, const SDL_Rect* pSrcRect, const SDL_Rect* pDestRect,
-                     DEGREES fAngle, const SDL_Point* pCenter, int iFlip);
+                     DEGREES fAngle, const SDL_Point* pCenter, int iFlip) noexcept;
 
     /// Deallocates managed SDL resource
     void Destroy    (void) noexcept;
@@ -175,7 +175,7 @@ public:
      *  @note The surface is not modified or freed by this function.
      *
      */
-    SDL_Texture* CreateTextureFromSurface(SDL_Surface* pSDLSurface);
+    SDL_Texture* CreateTextureFromSurface(SDL_Surface* pSDLSurface) noexcept;
 
     /**
      *  @brief Get whether integer scales are forced for resolution-independent rendering

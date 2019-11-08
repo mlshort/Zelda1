@@ -89,7 +89,7 @@ public:
     { };
 
     /// Default Destructor
-    ~CTexture();
+    ~CTexture() noexcept;
 
     /// Assignment Operator
     CTexture& operator=(const CTexture& rhs) noexcept;
@@ -101,11 +101,11 @@ public:
     void Destroy(void) noexcept;
 
     /// Returns Image Width
-    constexpr inline int GetWidth(void) const noexcept
+    constexpr int GetWidth(void) const noexcept
     { return m_iWidth; };
 
     /// Returns Image Height
-    constexpr inline int GetHeight(void) const noexcept
+    constexpr int GetHeight(void) const noexcept
     { return m_iHeight; };
 
     /**
@@ -142,7 +142,7 @@ public:
     *  @retval true             on success
     *  @retval false            on error or if the texture is not valid.
     */
-    bool Query(uint32_t& nFormat, int& iAccess, int& iWidth, int& iHeight);
+    bool Query(uint32_t& nFormat, int& iAccess, int& iWidth, int& iHeight) noexcept;
 
     /**
     *  @brief Set an additional color value used in render copy operations.
@@ -243,7 +243,7 @@ public:
     *  @retval false            if the texture is not valid or was not created with
     *                           SDL_TEXTUREACCESS_STREAMING
     */
-    bool Lock(const SDL_Rect* pSDLRect, void** ppPixels, int& nPitch);
+    bool Lock(const SDL_Rect* pSDLRect, void** ppPixels, int& nPitch) noexcept;
 
     /**
     *  @brief Unlock a texture, uploading the changes to video memory, if needed.
@@ -251,7 +251,7 @@ public:
     *  @retval true             on success
     *  @retval false            if the texture is not valid
     */
-    bool Unlock(void);
+    bool Unlock(void) noexcept;
 };
 
 #endif

@@ -32,7 +32,7 @@ class CFileStream : public IStream
     LONG   m_refCount;
 
 /// Initialization constructor
-    CFileStream(HANDLE hFile) noexcept
+    constexpr CFileStream(HANDLE hFile) noexcept
         : IStream(),
           m_hFile (hFile),
           m_refCount(1)
@@ -40,7 +40,7 @@ class CFileStream : public IStream
 
 public:
 /// Default Destructor
-    virtual ~CFileStream();
+    virtual ~CFileStream() noexcept;
 
 
     HRESULT static OpenFile(const TCHAR* pName, IStream** ppIStream, bool fWrite);

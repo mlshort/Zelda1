@@ -41,18 +41,17 @@ CActor::CActor(CActor&& oth) noexcept
     : IRenderable      (std::move(oth)),
       m_Type           (oth.m_Type),
       m_pGraphicsDevice(std::move(oth.m_pGraphicsDevice)),
-//      m_pTexture       (nullptr),
-      m_pTexture       (std::move(oth.m_pTexture)),
+      m_pTexture       (), // smart ptr
       m_ptPosn         (oth.m_ptPosn),
       m_ptStart        (oth.m_ptStart),
       m_degDirection   (oth.m_degDirection),
       m_nMaxRange      (oth.m_nMaxRange)
 {
     oth.m_pGraphicsDevice = nullptr;  // take ownership
-//    m_pTexture.swap(oth.m_pTexture);  // take ownership
+    m_pTexture.swap(oth.m_pTexture);  // take ownership
 }
 
-CActor::~CActor(void)
+CActor::~CActor(void) noexcept
 {
 #ifdef _DEBUG
     util::DebugTrace(_T("%S \n"), __FUNCTION__);

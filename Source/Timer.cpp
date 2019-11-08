@@ -125,7 +125,7 @@ uint32_t CTimer::GetTicks(void) const noexcept
     return 0;
 }
 
-void CTimer::fpsRegulate(void)
+void CTimer::fpsRegulate(void) noexcept
 {
     //Pause for a length of time such that frame rate is maintained
     auto msTicks = GetTicks();

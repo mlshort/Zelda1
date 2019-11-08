@@ -29,7 +29,7 @@
 #include "RedOctorok.h"
 
 
-CRedOctorok::~CRedOctorok(void)
+CRedOctorok::~CRedOctorok(void) noexcept
 {
 #ifdef _DEBUG
     util::DebugTrace(_T("%S \n"), __FUNCTION__);

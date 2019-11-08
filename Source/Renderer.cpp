@@ -24,7 +24,7 @@
 
 #include "Renderer.h"
 
-CRenderer::~CRenderer()
+CRenderer::~CRenderer() noexcept
 {
 #ifdef _DEBUG
     util::DebugTrace(_T("%S \n"), __FUNCTION__);
@@ -65,13 +65,13 @@ bool CRenderer::SetViewPort(const SDL_Rect& rect) noexcept
     return (SDL_RenderSetViewport(get_Handle(), &rect) == 0);
 };
 
-bool CRenderer::Copy(SDL_Texture* pSDLTexture, const SDL_Rect* pSrcRect, const SDL_Rect* pDestRect)
+bool CRenderer::Copy(SDL_Texture* pSDLTexture, const SDL_Rect* pSrcRect, const SDL_Rect* pDestRect) noexcept
 {
     return (SDL_RenderCopy(get_Handle(), pSDLTexture, pSrcRect, pDestRect) == 0);
 };
 
 bool CRenderer::CopyEx(SDL_Texture* pSDLTexture, const SDL_Rect* pSrcRect, const SDL_Rect* pDestRect,
-                       DEGREES degAngle, const SDL_Point* pCenter, int iFlip)
+                       DEGREES degAngle, const SDL_Point* pCenter, int iFlip) noexcept
 {
     return (SDL_RenderCopyEx(get_Handle(), pSDLTexture, pSrcRect, pDestRect, degAngle,
                              pCenter, static_cast<SDL_RendererFlip>(iFlip) ) == 0);
@@ -94,7 +94,7 @@ bool CRenderer::GetInfo(SDL_RendererInfo& info) noexcept
         return false;
 };
 
-SDL_Texture* CRenderer::CreateTextureFromSurface(SDL_Surface* pSDLSurface)
+SDL_Texture* CRenderer::CreateTextureFromSurface(SDL_Surface* pSDLSurface) noexcept
 {
     if (get_Handle())
         return SDL_CreateTextureFromSurface(get_Handle(), pSDLSurface);

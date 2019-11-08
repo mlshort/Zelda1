@@ -43,7 +43,7 @@ public:
     { };
 
     /// Default Destructor
-    ~CGraphicsDevice();
+    ~CGraphicsDevice() noexcept;
 
    /**
      *  @retval true on success
@@ -76,7 +76,7 @@ public:
      */
     bool Present(void) noexcept;
 
-    constexpr inline auto GetRenderer(void) noexcept
+    constexpr CRenderer* GetRenderer(void) noexcept
     { return m_pRenderer; };
 
 ///////////////////////////////////////////////////////////////////////////////

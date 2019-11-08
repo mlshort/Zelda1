@@ -10,7 +10,7 @@
  *
  *  <b>Assignment:</b> Zelda1 Project
  *
- *    We will be programming an open-world, Zelda 1 simulation in the 2-
+ *    We will be programming an open-world, Zelda simulation in the 2-
  *    dimensional plane, viewed top-down. The instructor has provided all
  *    the necessary images (although you are allowed to create and use your
  *    own sprites if they have the same roles and complexity). Your task is
